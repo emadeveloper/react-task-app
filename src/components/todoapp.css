@@ -1,0 +1,73 @@
+.to-do-container {
+    width: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.to-do-create-form {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.to-do-input{
+   flex-grow: 1;
+   width: 100%;
+   padding: 10px;
+   border-radius: 3px;
+   border: solid 1px #999;
+}
+
+.button-create{
+   border: none;
+   border-radius: 3px;
+   background-color: #4caf50;
+   color: white;
+   padding: 10px 20px;
+}
+
+.to-dos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.to-do {
+    padding: 10px;
+    background-color: white;
+}
+
+.to-do-title{
+    flex: 1;
+    font-size: 20px;
+}
+
+.to-do-update-form, .to-do-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(169, 26, 26);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
