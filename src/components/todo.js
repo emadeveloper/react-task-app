@@ -57,7 +57,7 @@ const ToDo = ({ item, onUpdate, onDelete }) => {
         <button className="button-delete" onClick={() => onDelete(item.id)}>
           Borrar Tarea
         </button>
-        <button className="button" onClick={onTaskComplete}>
+        <button className="button-complete" onClick={onTaskComplete}>
           Tarea Completada
         </button>
       </div>
