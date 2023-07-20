@@ -12,21 +12,23 @@ export default function ToDoApp() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (title === "") {
+    const lowerCaseTitle = title.toLowerCase();
+
+    if (lowerCaseTitle === "") {
       alert("No agregaste ninguna tarea");
+    } else if (
+      toDoList.some((item) => item.title.toLowerCase() === lowerCaseTitle)
+    ) {
+      alert("Ya agregaste esta tarea");
     } else {
       const newTask = {
-        title: title.toLowerCase(),
+        title: lowerCaseTitle,
         id: Date.now(),
         completed: false,
       };
-      const temp = [...toDoList];
-      temp.unshift(newTask);
-      setToDoList(temp);
+
+      setToDoList([...toDoList, newTask]);
       setTitle("");
-    }
-    if (toDoList.some((item) => item.title.toLowerCase() === title.toLowerCase())) {
-      alert("Ya agregaste esta tarea");
     }
   }
 
@@ -44,6 +46,7 @@ export default function ToDoApp() {
 
   return (
     <div className="to-do-container">
+      <h1 className="title-form">Lista de tareas</h1>
       <form className="to-do-create-form" onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
